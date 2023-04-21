@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+		<title>
+			Examen Taller Spring
+		</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+<body>
+	<p th:text="'Notas ,'+ ${nombre} + '!'">
+		
+	</p>
+	
+	<table>
+		<tr th:each="nt:${lstNotas}">
+			<td th:text="${nt.id}"></td>
+			<td th:text="${nt.curso}"></td>
+			<td th:text="${nt.nota}"></td>
+		</tr>
+	</table>
+</body>
+</html>
